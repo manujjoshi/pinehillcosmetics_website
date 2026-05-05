@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin | Global Editor</title>
+  <link rel="stylesheet" crossorigin href="/assets/styles-B8aK5n-l.css">
+</head>
+<body data-editor-page="global" data-editor-title="Global">
+  <main class="wp-admin-shell">
+    <aside class="wp-sidebar">
+      <h2 class="wp-sidebar-title">Page Editors</h2>
+      <ul class="wp-sidebar-menu">
+        <li><a href="admin.html">Dashboard</a></li>
+        <li><a href="admin-editor-global.html" class="active">Global</a></li>
+        <li><a href="admin-editor-home.html">Home</a></li>
+        <li><a href="admin-editor-about.html">About</a></li>
+        <li><a href="admin-editor-products.html">Products</a></li>
+        <li><a href="admin-editor-contact.html">Contact</a></li>
+        <li><a href="admin-editor-checkout.html">Checkout</a></li>
+        <li><a href="admin-editor-success.html">Success</a></li>
+      </ul>
+    </aside>
+    <section class="wp-admin-content">
+      <div class="wp-admin-topbar">
+        <h1 id="editor-page-title">Global Editor</h1>
+        <div class="admin-actions">
+          <button id="editor-save-btn" class="btn" type="button">Save Page</button>
+          <button id="editor-logout-btn" class="btn-secondary" type="button">Logout</button>
+        </div>
+      </div>
+      <article class="admin-card">
+        <div id="page-editor-fields" class="admin-form-grid"></div>
+      </article>
+    </section>
+  </main>
+  <script src="admin-page-editor.js"></script>
+</body>
+</html>
+

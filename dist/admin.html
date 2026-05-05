@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Panel | Pine and Hill Cosmetics</title>
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon-ryPanpk8.svg" />
+  <link rel="stylesheet" crossorigin href="/assets/styles-B8aK5n-l.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html">
+        <img src="/assets/pine-hill-logo-C1RfeU6v.png" alt="Pine and Hill Cosmetics logo" class="brand-logo" />
+        <span data-content-key="site.brandName">Pine and Hill Cosmetics</span>
+      </a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html" data-content-key="nav.home">Home</a></li>
+          <li><a href="products.html" data-content-key="nav.products">Products</a></li>
+          <li><a href="admin.html" class="active" data-content-key="nav.admin">Admin</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container admin-layout">
+      <section class="admin-card" id="admin-login-card">
+        <h1>Admin Login</h1>
+        <p>Enter your admin password to manage products.</p>
+        <form id="admin-login-form" class="contact-form">
+          <label for="admin-password">Password</label>
+          <input id="admin-password" type="password" required />
+          <button type="submit" class="btn">Login</button>
+        </form>
+      </section>
+
+      <section class="admin-card hidden" id="admin-panel-card">
+        <div class="admin-head">
+          <h1>Product Management</h1>
+          <button class="btn-secondary" id="admin-logout" type="button">Logout</button>
+        </div>
+
+        <form id="product-form" class="admin-form-grid">
+          <input id="product-id" type="hidden" />
+
+          <label for="product-name">Product Name</label>
+          <input id="product-name" type="text" required />
+
+          <label for="product-description">Description</label>
+          <textarea id="product-description" rows="3" required></textarea>
+
+          <label for="product-price">Price (INR)</label>
+          <input id="product-price" type="number" min="1" required />
+
+          <label for="product-category">Category</label>
+          <select id="product-category" required>
+            <option value="Skincare">Skincare</option>
+            <option value="Jewellery">Jewellery</option>
+          </select>
+
+          <label for="product-image">Image URL (optional if you upload)</label>
+          <input id="product-image" type="text" placeholder="Paste URL or upload an image below" />
+          <label for="product-image-file">Or Upload Image</label>
+          <input id="product-image-file" type="file" accept="image/*" />
+          <button type="button" class="btn-secondary" id="upload-image-btn">Upload Selected Image</button>
+
+          <div class="admin-checkbox-row">
+            <label><input id="product-featured" type="checkbox" /> Featured</label>
+            <label><input id="product-clearance" type="checkbox" /> Clearance</label>
+            <label><input id="product-viral" type="checkbox" /> Viral</label>
+          </div>
+
+          <div class="admin-actions">
+            <button type="submit" class="btn" id="product-submit-btn">Save Product</button>
+            <button type="button" class="btn-secondary" id="product-reset-btn">Clear</button>
+          </div>
+        </form>
+
+        <div id="admin-products-list" class="admin-products-list"></div>
+      </section>
+
+      <section class="admin-card hidden" id="content-editor-card">
+        <div class="admin-head">
+          <h2>Page Manager</h2>
+        </div>
+        <p class="note">Edit each page separately, like WordPress.</p>
+        <div class="admin-page-grid">
+          <a class="admin-page-link" href="admin-editor-global.html">Global (Brand, Promo, Menu)</a>
+          <a class="admin-page-link" href="admin-editor-home.html">Home Page</a>
+          <a class="admin-page-link" href="admin-editor-about.html">About Page</a>
+          <a class="admin-page-link" href="admin-editor-products.html">Products Page</a>
+          <a class="admin-page-link" href="admin-editor-contact.html">Contact Page</a>
+          <a class="admin-page-link" href="admin-editor-checkout.html">Checkout Page</a>
+          <a class="admin-page-link" href="admin-editor-success.html">Success Page</a>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <script src="admin.js"></script>
+</body>
+</html>
+
+

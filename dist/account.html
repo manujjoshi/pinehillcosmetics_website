@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pine and Hill Cosmetics | My Account</title>
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon-ryPanpk8.svg" />
+  <link rel="stylesheet" crossorigin href="/assets/styles-B8aK5n-l.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html">
+        <img src="/assets/pine-hill-logo-C1RfeU6v.png" alt="Pine and Hill Cosmetics logo" class="brand-logo" />
+        <span data-content-key="site.brandName">Pine and Hill Cosmetics</span>
+      </a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html" data-content-key="nav.home">Home</a></li>
+          <li><a href="about.html" data-content-key="nav.about">About Us</a></li>
+          <li><a href="products.html" data-content-key="nav.products">Products</a></li>
+          <li><a href="contact.html" data-content-key="nav.contact">Contact Us</a></li>
+          <li><a href="admin.html" data-content-key="nav.admin">Admin</a></li>
+          <li><a href="checkout.html"><span data-content-key="nav.cart">Cart</span> <span id="cart-count">0</span></a></li>
+          <li><a href="account.html" class="active">Account</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container">
+      <section id="account-auth-section" class="account-auth-grid">
+        <article class="contact-form">
+          <h2>Create Account</h2>
+          <form id="signup-form" class="delivery-form-grid">
+            <label for="signup-full-name">Full Name</label>
+            <input id="signup-full-name" name="fullName" type="text" required />
+            <label for="signup-email">Email</label>
+            <input id="signup-email" name="email" type="email" required />
+            <label for="signup-phone">Phone</label>
+            <input id="signup-phone" name="phone" type="tel" inputmode="numeric" required />
+            <label for="signup-password">Password</label>
+            <input id="signup-password" name="password" type="password" minlength="6" required />
+            <button type="submit" class="btn">Sign Up</button>
+          </form>
+        </article>
+        <article class="contact-form">
+          <h2>Login</h2>
+          <form id="login-form" class="delivery-form-grid">
+            <label for="login-email">Email</label>
+            <input id="login-email" name="email" type="email" required />
+            <label for="login-password">Password</label>
+            <input id="login-password" name="password" type="password" required />
+            <button type="submit" class="btn">Login</button>
+          </form>
+        </article>
+      </section>
+
+      <section id="account-dashboard" class="hidden">
+        <div class="admin-head">
+          <h1>My Account</h1>
+          <button id="account-logout-btn" type="button" class="btn-secondary">Logout</button>
+        </div>
+        <p id="account-user-greeting" class="note"></p>
+
+        <article class="checkout-box">
+          <h2>Saved Addresses</h2>
+          <div id="saved-addresses-list" class="admin-products-list"></div>
+          <form id="add-address-form" class="delivery-form-grid">
+            <label for="address-full-name">Full Name</label>
+            <input id="address-full-name" name="fullName" type="text" required />
+            <label for="address-phone">Phone</label>
+            <input id="address-phone" name="phone" type="tel" inputmode="numeric" required />
+            <label for="address-email">Email</label>
+            <input id="address-email" name="email" type="email" required />
+            <label for="address-line1">Address Line 1</label>
+            <input id="address-line1" name="addressLine1" type="text" required />
+            <label for="address-line2">Address Line 2 (Optional)</label>
+            <input id="address-line2" name="addressLine2" type="text" />
+            <div class="delivery-form-columns">
+              <div>
+                <label for="address-city">City</label>
+                <input id="address-city" name="city" type="text" required />
+              </div>
+              <div>
+                <label for="address-state">State</label>
+                <input id="address-state" name="state" type="text" required />
+              </div>
+              <div>
+                <label for="address-pincode">Pincode</label>
+                <input id="address-pincode" name="pincode" type="text" inputmode="numeric" required />
+              </div>
+            </div>
+            <button type="submit" class="btn">Save Address</button>
+          </form>
+        </article>
+
+        <article class="checkout-box">
+          <h2>Order History</h2>
+          <div id="order-history-list" class="admin-products-list"></div>
+        </article>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> <span data-content-key="site.footerText">Pine and Hill Cosmetics. All rights reserved.</span></p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Company Website | Products</title>
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon-ryPanpk8.svg" />
+  <link rel="stylesheet" crossorigin href="/assets/styles-B8aK5n-l.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html">
+        <img src="/assets/pine-hill-logo-C1RfeU6v.png" alt="Pine and Hill Cosmetics logo" class="brand-logo" />
+        <span data-content-key="site.brandName">Pine and Hill Cosmetics</span>
+      </a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html" data-content-key="nav.home">Home</a></li>
+          <li><a href="about.html" data-content-key="nav.about">About Us</a></li>
+          <li><a href="products.html" class="active" data-content-key="nav.products">Products</a></li>
+          <li><a href="contact.html" data-content-key="nav.contact">Contact Us</a></li>
+          <li><a href="admin.html" data-content-key="nav.admin">Admin</a></li>
+          <li><a href="checkout.html"><span data-content-key="nav.cart">Cart</span> <span id="cart-count">0</span></a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container">
+      <h1 data-content-key="productsPage.title">Our Product Collection</h1>
+      <p data-content-key="productsPage.subtitle">Browse premium products with clear pricing and add them directly to your cart.</p>
+      <div class="product-toolbar">
+        <input id="search-products" type="search" placeholder="Search products..." />
+        <select id="filter-category" aria-label="Filter by category">
+          <option value="all">All Categories</option>
+        </select>
+        <select id="sort-products" aria-label="Sort products">
+          <option value="featured">Sort: Featured</option>
+          <option value="price-asc">Price: Low to High</option>
+          <option value="price-desc">Price: High to Low</option>
+          <option value="name-asc">Name: A to Z</option>
+        </select>
+      </div>
+      <div id="product-list" class="product-grid"></div>
+    </div>
+  </main>
+
+  <dialog id="product-modal" class="product-modal">
+    <div id="product-modal-content"></div>
+  </dialog>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> <span data-content-key="site.footerText">Pine and Hill Cosmetics. All rights reserved.</span></p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+

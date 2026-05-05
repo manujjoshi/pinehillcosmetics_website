@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Company Website | Checkout</title>
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon-ryPanpk8.svg" />
+  <link rel="stylesheet" crossorigin href="/assets/styles-B8aK5n-l.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html">
+        <img src="/assets/pine-hill-logo-C1RfeU6v.png" alt="Pine and Hill Cosmetics logo" class="brand-logo" />
+        <span data-content-key="site.brandName">Pine and Hill Cosmetics</span>
+      </a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html" data-content-key="nav.home">Home</a></li>
+          <li><a href="about.html" data-content-key="nav.about">About Us</a></li>
+          <li><a href="products.html" data-content-key="nav.products">Products</a></li>
+          <li><a href="contact.html" data-content-key="nav.contact">Contact Us</a></li>
+          <li><a href="admin.html" data-content-key="nav.admin">Admin</a></li>
+          <li><a href="checkout.html" class="active"><span data-content-key="nav.cart">Cart</span> <span id="cart-count">0</span></a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container">
+      <h1 data-content-key="checkout.title">Your Cart</h1>
+      <div id="cart-items" class="cart-items"></div>
+
+      <section class="checkout-box">
+        <h2>Delivery Address</h2>
+        <p class="note">Enter your shipping details to continue with payment.</p>
+        <form id="delivery-address-form" class="delivery-form-grid">
+          <label for="delivery-full-name">Full Name</label>
+          <input id="delivery-full-name" name="fullName" type="text" autocomplete="name" required />
+
+          <label for="delivery-phone">Phone Number</label>
+          <input id="delivery-phone" name="phone" type="tel" inputmode="numeric" placeholder="10-digit mobile number" required />
+
+          <label for="delivery-email">Email</label>
+          <input id="delivery-email" name="email" type="email" autocomplete="email" required />
+
+          <label for="delivery-address-line1">Address Line 1</label>
+          <input id="delivery-address-line1" name="addressLine1" type="text" autocomplete="address-line1" required />
+
+          <label for="delivery-address-line2">Address Line 2 (Optional)</label>
+          <input id="delivery-address-line2" name="addressLine2" type="text" autocomplete="address-line2" />
+
+          <div class="delivery-form-columns">
+            <div>
+              <label for="delivery-city">City</label>
+              <input id="delivery-city" name="city" type="text" autocomplete="address-level2" required />
+            </div>
+            <div>
+              <label for="delivery-state">State</label>
+              <input id="delivery-state" name="state" type="text" autocomplete="address-level1" required />
+            </div>
+            <div>
+              <label for="delivery-pincode">Pincode</label>
+              <input id="delivery-pincode" name="pincode" type="text" inputmode="numeric" placeholder="6-digit pincode" required />
+            </div>
+          </div>
+        </form>
+      </section>
+
+      <div class="checkout-box">
+        <p><strong data-content-key="checkout.totalLabel">Total:</strong> <span id="cart-total">Rs 0</span></p>
+        <button id="continue-to-payment" class="btn" data-content-key="checkout.continueButton">Continue to Payment</button>
+      </div>
+
+      <section id="payment-options" class="payment-options hidden">
+        <h2 data-content-key="checkout.paymentTitle">Payment Options</h2>
+        <p data-content-key="checkout.paymentSubtitle">Select your preferred payment method.</p>
+        <div class="payment-grid">
+          <button class="btn-secondary" id="pay-upi" data-content-key="checkout.upiButton">Pay via UPI</button>
+          <button class="btn-secondary" id="pay-stripe" data-content-key="checkout.stripeButton">Pay with Card (Stripe Checkout)</button>
+          <button class="btn-secondary" id="pay-razorpay" data-content-key="checkout.razorpayButton">Pay via Razorpay</button>
+          <button class="btn-secondary" id="pay-paypal" data-content-key="checkout.paypalButton">Pay via PayPal</button>
+        </div>
+        <p class="note" data-content-key="checkout.note">
+          Stripe button creates a secure checkout session from your backend API.
+          Configure account details in <code>.env</code> and <code>script.js</code>.
+        </p>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> <span data-content-key="site.footerText">Pine and Hill Cosmetics. All rights reserved.</span></p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+
